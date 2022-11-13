@@ -12,12 +12,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-     BuildNum: $(date +%s)
-
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag loredous/faqbot:$BuildNum --tag loredous/faqbot:dev-latest
-        docker push loredous/faqbot:$BuildNum
+        docker build . --file Dockerfile --tag loredous/faqbot:$GITHUB_RUN_NUMBER --tag loredous/faqbot:dev-latest
+        docker push loredous/faqbot:$GITHUB_RUN_NUMBER
