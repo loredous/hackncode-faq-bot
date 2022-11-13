@@ -19,5 +19,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag loredous/faqbot:$Buildnum --tag loredous/faqbot:dev-latest
-        docker push loredous/faqbot:$Buildnum
+        docker build . --file Dockerfile --tag loredous/faqbot:$BuildNum --tag loredous/faqbot:dev-latest
+        docker push loredous/faqbot:$BuildNum
