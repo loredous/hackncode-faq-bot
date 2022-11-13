@@ -12,8 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      with:
-        ref: ${{ github.event.release.tagCommit }}
     - name: Log in to Docker Hub
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
       with:
@@ -21,5 +19,5 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag loredous/faqbot:$GITHUB_RUN_NUMBER --tag loredous/faqbot:${{ github.event.release.tagName }}
+        docker build . --file Dockerfile --tag loredous/faqbot:$GITHUB_RUN_NUMBER --tag loredous/faqbot:${{ github.event.release.tag_name }}
         docker push -a loredous/faqbot
