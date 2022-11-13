@@ -1,4 +1,4 @@
-FROM python:3-slim
+FROM python:3.10-slim
 
 ENV BOT_TOKEN=""
 ENV WP_BASE=""
