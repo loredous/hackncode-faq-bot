@@ -12,3 +12,4 @@ python-wordpress-xmlrpc==2.3
 requests==2.28.1
 urllib3==1.26.12
 yarl==1.8.1
+openai==0.26.0
