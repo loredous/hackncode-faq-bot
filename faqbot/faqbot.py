@@ -69,27 +69,27 @@ async def append_to_post(ctx, id: int, message: discord.Message):
     await ctx.respond(f'Message content appended to Post ID {id}!')
 
 
-@bot.slash_command(name="davinci", description="Provide an automated response to a question using the OpenAI DaVinci engine", guild_ids=[135499198865997824])
+@bot.slash_command(name="davinci", description="Provide an automated response to a question using the OpenAI DaVinci engine")
 async def answer_with_davinci(ctx, message):
     await ask_an_ai(ctx, message, model="davinci")
 
 
-@bot.slash_command(name="curie", description="Provide an automated response to a question using the OpenAI Curie engine", guild_ids=[135499198865997824])
+@bot.slash_command(name="curie", description="Provide an automated response to a question using the OpenAI Curie engine")
 async def answer_with_curie(ctx, message):
     await ask_an_ai(ctx, message, model="curie")
 
 
-@bot.slash_command(name="babbage", description="Provide an automated response to a question using the OpenAI Babbage engine", guild_ids=[135499198865997824])
+@bot.slash_command(name="babbage", description="Provide an automated response to a question using the OpenAI Babbage engine")
 async def answer_with_babage(ctx, message):
     await ask_an_ai(ctx, message, model="babbage")
 
 
-@bot.slash_command(name="ada", description="Provide an automated response to a question using the OpenAI Ada engine", guild_ids=[135499198865997824])
+@bot.slash_command(name="ada", description="Provide an automated response to a question using the OpenAI Ada engine")
 async def answer_with_ada(ctx, message):
     await ask_an_ai(ctx, message, model="ada")
 
 
-@bot.slash_command(name="codex", description="Provide automated code generation using the OpenAI Codex engine", guild_ids=[135499198865997824])
+@bot.slash_command(name="codex", description="Provide automated code generation using the OpenAI Codex engine")
 async def answer_with_codex(ctx, message):
     await ask_an_ai(ctx, message, model="codex")
 
